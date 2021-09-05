@@ -1,16 +1,18 @@
 
 import './App.css';
+import Navbar from './Navbar';
+import Home from './Home';
 
 function App() {
 
-  const title = 'This is a dynamic title!'
-  const likes = 50;
-
   return (
     <div className="App">
+
+      <Navbar />
+
       <div className="content"></div>
-      <h1>{title}</h1>
-      <p>Number of likes: {likes}</p>
+      <Home />
+
     </div>
   );
 }
