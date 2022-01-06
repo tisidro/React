@@ -1,7 +1,8 @@
-const BlogList = ({ blogs, title, handleDelete }) => {
+//would need to pass in handleDelete if running code w/out endpoints
+const BlogList = ({ blogs, title }) => {
   //const blogs = props.blogs
   //const title = props.title instead of these I just destructured properties I want from the props,can do it either way
-  //it's also taking handleDelete as a prop (that is from the Home parent component)
+
   return (
     <div className='blog-list'>
       <h2>{title}</h2>
@@ -12,8 +13,8 @@ const BlogList = ({ blogs, title, handleDelete }) => {
           {/* //dynamically generate title/author for each post */}
           <h2>{blog.title}</h2>
           <p>written by: {blog.author}</p>
-          <button onClick={() => handleDelete(blog.id)}> delete post</button>
-          {/* delete function is defined on home page where state is set */}
+          {/* <button onClick={() => handleDelete(blog.id)}> delete post</button> */}
+          {/* this button would only be used for delete code w/out endpoints */}
         </div>
       ))}
     </div>
